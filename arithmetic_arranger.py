@@ -13,6 +13,8 @@ def arithmetic_arranger(equations, flag):
         b += operator.ljust(3)
         b += second_n.ljust(10)
         _ += '-------'.rjust(3).ljust(13)
+        if not '+' in equation or not '-' in equation:
+            return "Only Addition and subtraction allow"
         if flag:
             answer += str(eval(equation)).rjust(5).ljust(13)
 ##        print(b)
