@@ -2,12 +2,18 @@ def arithmetic_arranger(equations):
     """this takes list of arithmetic problem and rearrange them"""
     if len(equations) > 5:
         return "To many Problems"
-
+    a = ''
+    b = ''
     for equation in equations:
         first_n, operator, second_n = equation.split(' ')
-        print(first_n.ljust(10), end='')
-        print(operator.ljust(2), end='')
-##        print(first_n, operator, second_n)
+        a += first_n.rjust(5)
+##        print(a)
+        b += operator.ljust(3)
+        b += second_n.ljust(10)
+##        print(b)
+
+    print(a)
+    print(b)
 
 
 
